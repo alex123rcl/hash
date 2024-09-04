@@ -1,0 +1,35 @@
+ <h1>Datos de la Persona</h1>
+  <h2>Tabla de Datos</h2>
+<div class = "container">
+  <% if @dato %>
+    <table>
+      <thead>
+        <tr>
+          <th>Datos</th>
+          <th>Valores</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nombre</td>
+          <td><%= @dato[:nombre] %></td>
+        </tr>
+        <tr>
+          <td>Apellido</td>
+          <td><%= @dato[:apellido] %></td>
+        </tr>
+        
+        <tr>
+          <td>Teléfono</td>
+          <td><%= @dato[:telefono] %></td>
+        </tr>
+        <tr>
+          <td>Correo</td>
+          <td><%= @dato[:correo] %></td>
+        </tr>
+      </tbody>
+    </table>
+  <% else %>
+    <p>No se encontraron datos.</p>
+  <% end %>
+  </div>
